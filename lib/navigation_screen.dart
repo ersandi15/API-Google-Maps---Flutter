@@ -93,7 +93,7 @@ class _NavigationScreenState extends State<NavigationScreen> {
                           ),
                           onPressed: () async {
                             await launchUrl(Uri.parse(
-                                'google.navigation:q=${widget.lat}, ${widget.lng}&key=AIzaSyBW0A1IsTYX-XkufhjY7FfE6oErwmzrxQY'));
+                                'google.navigation:q=${widget.lat}, ${widget.lng}&key=YOUR-API-KEY'));
                           },
                         ),
                       ),
@@ -148,7 +148,7 @@ class _NavigationScreenState extends State<NavigationScreen> {
     List<LatLng> polylineCoordinates = [];
     List<dynamic> points = [];
     PolylineResult result = await polylinePoints.getRouteBetweenCoordinates(
-        'AIzaSyBW0A1IsTYX-XkufhjY7FfE6oErwmzrxQY',
+        'YOUR-API-KEY',
         PointLatLng(curLocation.latitude, curLocation.longitude),
         PointLatLng(dst.latitude, dst.longitude),
         travelMode: TravelMode.driving);
